@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { TaskService } from './services/task.service';
+import { TaskDTO } from './models/task';
+import { Grid, AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import Task from './components/Task';
+import ManageTaskModal from './components/ManageTask';
+import Home from './components/Home';
+import NavBar from './components/NavBar';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Home />
     </div>
   );
 }
 
 export default App;
+
